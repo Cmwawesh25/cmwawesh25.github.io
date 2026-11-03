@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flux Client</title>
+<meta name="description" content="Flux Client is a community Minecraft: Java Edition launcher for Windows, focused on PvP add-ons and better performance.">
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #14171d;
+    --line: #2a2f3a;
+    --text: #e8eaee;
+    --muted: #a3aab6;
+    --accent: #22d3ee;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 16px 72px; }
+  h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.15; letter-spacing: -0.01em; }
+  .lead { margin: 0 0 40px; color: var(--muted); font-size: 18px; }
+  section {
+    margin-top: 16px;
+    padding: 20px 24px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--accent);
+  }
+  h2 { margin: 0 0 8px; font-size: 18px; }
+  p { margin: 0 0 8px; }
+  p:last-child, ul:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding-left: 20px; }
+  li + li { margin-top: 4px; }
+  code { font: 14px ui-monospace, Consolas, monospace; color: var(--accent); overflow-wrap: anywhere; }
+  footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Flux Client</h1>
+  <p class="lead">A community Minecraft: Java Edition launcher for Windows, focused on PvP add-ons and better performance.</p>
+
+  <section>
+    <h2>What it does</h2>
+    <ul>
+      <li>Installs and launches Minecraft: Java Edition, from version 1.7.10 to the current releases.</li>
+      <li>Adds a configurable in-game HUD: FPS, CPS, ping, keystrokes, armor, potion effects, coordinates and more.</li>
+      <li>Improves performance with its own optimizations and open-source mods such as Sodium.</li>
+      <li>Generates an optional interface theme and high-resolution textures on the player's PC, from their own game files.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why it needs Microsoft sign-in</h2>
+    <p>Players sign in with their own Microsoft account to prove they own Minecraft and to play on online servers. The launcher uses the device code flow: the player signs in on Microsoft's own page and never types their password into the launcher.</p>
+    <p>The only permissions requested are <code>XboxLive.signin</code> and <code>offline_access</code>. The Minecraft Services API is used to obtain a game token and to read the player's Minecraft profile.</p>
+  </section>
+
+  <section>
+    <h2>Data and privacy</h2>
+    <ul>
+      <li>Flux Client has no server and no account system of its own, and no analytics.</li>
+      <li>Sign-in tokens are stored on the player's PC, encrypted with the Windows credential protection when it is available.</li>
+      <li>Tokens are only sent to Microsoft, Xbox Live and Minecraft services, and to the game itself.</li>
+      <li>The launcher also downloads game files from Mojang, Fabric, Adoptium and Modrinth, and reads public server status from mcstatus.io and mcsrvstat.us. These requests do not include sign-in tokens.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions or problems can be reported by opening an issue on this project's GitHub repository.</p>
+  </section>
+
+  <footer>Flux Client is not an official Minecraft product and is not approved by or associated with Mojang or Microsoft.</footer>
+</main>
+</body>
+</html>
